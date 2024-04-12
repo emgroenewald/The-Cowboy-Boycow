@@ -7,6 +7,7 @@ public class Damage : MonoBehaviour
     [SerializeField] float damage = -1;
     [SerializeField] string damageTag = "Player";
 
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag(damageTag))

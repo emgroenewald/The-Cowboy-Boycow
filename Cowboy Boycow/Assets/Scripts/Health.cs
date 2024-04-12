@@ -7,13 +7,13 @@ public class Health : MonoBehaviour
     [SerializeField] float health = 3;
     [SerializeField] TextMeshProUGUI printer;
     [SerializeField] GameObject gameOverMenu;
+    private Rigidbody2D rb;
 
 
     private void start()
     {
         printer.text = "Health: " + health;
     }
-
 
 
     void Start()
@@ -28,10 +28,11 @@ public class Health : MonoBehaviour
 
     }
 
-    public void AddHealth(float healtToAdd)
+    public void AddHealth(float healthToAdd)
     {
+        health += healthToAdd;
         printer.text = "Health: " + health;
-        health += healtToAdd;
+
 
         if (health <= 0)
         {
